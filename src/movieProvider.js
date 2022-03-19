@@ -8,6 +8,7 @@ const MovieProvider = ({children}) => {
         {name: 'Nguyen Van Tung', age: 40, keyValue: '1'},
         {name: 'Nguyen Minh Nhat', age: 11, keyValue: '2'},
         {name: 'Nguyen Quynh chi', age: 14, keyValue: '3'},
+        {name: 'Nguyen Thị Quỳnh Ly', age: 40, keyValue: '4'},
     ]);
 
     return (

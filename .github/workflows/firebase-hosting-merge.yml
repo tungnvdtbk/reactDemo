@@ -12,8 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm ci || true
-      - run: npm audit fix || true
-      - run: npm audit fix --force || true
       - run: CI=false && npm run build
       - uses: w9jds/firebase-action@master
         with:
