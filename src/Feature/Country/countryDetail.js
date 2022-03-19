@@ -1,5 +1,5 @@
 import { useContext, useState } from "react"
-import { useQueries, useQuery } from "react-query";
+import {  useQuery } from "react-query";
 import { countryContext } from "./countryContext"
 
 async function fetCountry(query) {

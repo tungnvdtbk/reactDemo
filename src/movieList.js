@@ -5,6 +5,9 @@ import { MovieContext } from "./movieProvider";
 const MovieList = () => {
     const [movies, setMovies] = useContext(MovieContext);
 
+    const addmovieHandler = (movie) => {
+        setMovies([...setMovies, movie]);
+    }
     return (
         <div>
             {movies.map(item => (

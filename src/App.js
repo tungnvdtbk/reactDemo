@@ -1,11 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
-import { MovieProvider } from './movieProvider';
-import MovieList from './movieList';
+import  MovieProvider  from './movieProvider';
+
 import HomeContent from './HomeContent';
 import { ContryContent } from './Feature/Country/countryDetail';
 
-import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+import { QueryClient, QueryClientProvider } from 'react-query'
 
 const queryClient = new QueryClient()
 
