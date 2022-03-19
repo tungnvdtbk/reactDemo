@@ -11,9 +11,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: nmp ci
-      - run: npm audit fix
-      - run: npm audit fix --force
+      - run: npp ci || true
+      - run: npm audit fix || true
+      - run: npm audit fix --force || true
       - run: npm run build
       - uses: w9jds/firebase-action@master
         with:
