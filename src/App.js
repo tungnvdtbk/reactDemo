@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <QueryClientProvider client={queryClient}>
         <p onClick={() => clickPElement()}>
-          test click
+          test click hello world
         </p>
         <ContryContent/>
         <MovieProvider>      
