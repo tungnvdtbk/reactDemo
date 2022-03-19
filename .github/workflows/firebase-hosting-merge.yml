@@ -14,7 +14,7 @@ jobs:
       - run: npm ci || true
       - run: npm audit fix || true
       - run: npm audit fix --force || true
-      - run: npm run build
+      - run: CI=false && npm run build
       - uses: w9jds/firebase-action@master
         with:
           args: deploy --only hosting
