@@ -1,5 +1,6 @@
-
+import React from 'react';
 import MovieList from './movieList';
+
 import { memo } from 'react';
 
 
