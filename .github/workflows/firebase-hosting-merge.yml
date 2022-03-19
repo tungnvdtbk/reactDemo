@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: npp ci || true
+      - run: npm ci || true
       - run: npm audit fix || true
       - run: npm audit fix --force || true
       - run: npm run build
