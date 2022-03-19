@@ -1,23 +1,31 @@
 import logo from './logo.svg';
 import './App.css';
+import { MovieProvider } from './movieProvider';
+import MovieList from './movieList';
+import HomeContent from './HomeContent';
+import { ContryContent } from './Feature/Country/countryDetail';
+
+import { QueryClient, QueryClientProvider, useQuery } from 'react-query'
+
+const queryClient = new QueryClient()
+
+
 
 function App() {
+  const clickPElement = () => {
+    console.log("clickPElement");
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
+      <QueryClientProvider client={queryClient}>
+        <p onClick={() => clickPElement()}>
+          test click
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <ContryContent/>
+        <MovieProvider>      
+          <HomeContent />
+        </MovieProvider>
+      </QueryClientProvider>
     </div>
   );
 }
