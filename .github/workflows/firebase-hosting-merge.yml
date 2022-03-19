@@ -12,9 +12,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm i || npm audit fix || npm run build
-      - uses: FirebaseExtended/action-hosting-deploy@v0
+      - uses: w9jds/firebase-action@master
         with:
+          args: deploy --only hosting
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_REACTDEMO_4EB59 }}'
           channelId: live
           projectId: reactdemo-4eb59
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_REACTDEMO_4EB59 }}
