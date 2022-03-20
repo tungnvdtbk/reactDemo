@@ -8,6 +8,7 @@ import { ContryContent } from './Feature/Country/countryDetail';
 
 import { QueryClient, QueryClientProvider } from 'react-query'
 import cityApi from 'api/cityApi.ts';
+//import cityApi from 'api/cityApi';
 
 
 const queryClient = new QueryClient()
@@ -16,8 +17,9 @@ const queryClient = new QueryClient()
 function App() {
 
   useEffect(() => {
-    var data = cityApi.getAll().then(data => console.log("Axios client get:", data));
-    console.log('useEffect', data);
+    cityApi.getAll().then(data => console.log('useEffect', data));
+    // var data = cityApi.getAll().then(data => console.log("Axios client get:", data));
+    // console.log('useEffect', data);
   });
 
   const clickPElement = () => {
