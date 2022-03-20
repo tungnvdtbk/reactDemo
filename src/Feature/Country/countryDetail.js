@@ -38,7 +38,7 @@ export const ContryContent = () => {
     }
     return (
         <countryContext.Provider value = {{country, setCountry} }>
-            <CountryDetail/>
+            {/* <CountryDetail/> */}
             <button onClick={() => loadDataHandler()}>Load data</button>
         </countryContext.Provider>
     )

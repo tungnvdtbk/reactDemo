@@ -1,0 +1,18 @@
+
+
+
+@baseUrl = http://js-post-api.herokuapp.com/api
+
+
+### @name GetAllCities
+
+GET {{baseUrl}}/cities
+
+
+### @name getAllStudent
+GET {{baseUrl}}/students?_pange_1&_limit=10
+
+
+### @name xxxx
+GET {{baseUrl}}/cities
+
